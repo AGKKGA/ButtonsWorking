@@ -1,0 +1,116 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'poopins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    padding: 0 08%;
+    position: relative;
+    animation: Bgrounds 15s ease-in-out infinite;
+}
+@keyframes Bgrounds {
+    0%{
+        background-image: url(Pictures/bahcesehir_11_8_20-124_compressed.jpg);
+    }
+    25%{
+        background-image: url(Pictures/bahcesehir_11_8_20-46_compressed.jpg);
+    }
+    50%{
+        background-image: url(Pictures/bahcesehir_11_8_20-77_compressed.jpg);
+    }
+    75%{
+        background-image: url(Pictures/bahcesehir_11_8_20-474_compressed.jpg);
+    }
+    100%{
+        background-image: url(Pictures/bahcesehir_11_8_20-124_compressed.jpg);
+    }
+}
+
+.logo {
+    width: 200px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.content{
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #00426e;
+}
+
+.content h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.content h1 span{
+    color: rgb(151, 26, 26);
+}
+
+.content button{
+    font-size: 15px;
+    font-weight: 2200;
+    background: transparent;
+    border:  2px solid #00426e;
+    outline: none;
+    padding: 12px 25px;
+    color: #ffffff;
+    display:flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+.content button img{
+    width: 20px;
+    margin-left: 10px;
+}
+
+.launch-time {
+    display: flex;
+}
+
+.launch-time div{
+    color: white;
+    flex-basis: 100px;
+}
+
+.launch-time div p{
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+
+.bookPen {
+    width: 200px;
+    position:absolute;
+    right: 10%;
+    bottom: 0;
+    animation: BookPen 3s alternate infinite;
+}
+@keyframes BookPen {
+    0%{
+        size: 25px;
+        bottom: -100;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        size: 200px;
+        bottom: 90%;
+        opacity: 0;
+    }
+    
+}
+

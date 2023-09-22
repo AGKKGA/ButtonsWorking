@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "style.css" rel = "stylesheet" type = "text/css">
+    <title>University starting soon</title>
+</head>
+<body>
+    <div class="container">
+        <img src="Pictures/334271507_1144051589603931_556150351327732686_n-removebg-preview.png" class = "logo">
+        
+        <div class="content">
+            <h1>University is <span> Reopening</span></h1>
+            <p>Hope to see you soon</p>
+            <div class="launch-time">
+                <div>
+                    <p id="Days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="Hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="Minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="Seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+
+            </div>
+             <a href = "http://ois.baucyprus.edu.tr/auth/login"><button type="button">Registration <img src="Pictures/regis.png"></button> <br> </a>
+             <a href = "https://baucyprus.edu.tr/academic-calendar/" ><button type="button">Acedamic Calendar <img src="Pictures/calendar.png"></button> <br> </a>
+             <button id="showImageBtn">Fuar - Bus Timing <img src = "Pictures/BSicon_BUS.svg.png"> </button>
+             <img id="imageToDisplay" src="Pictures/FUAR.jpg" alt="Image" style="display: none;">
+        </div>
+        <img src="Pictures/43078.png" class="bookPen">
+    </div>
+
+<script>
+    var countDownDate = new Date("September 25, 2023 00:00:00").getTime();
+    var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("Days").innerHTML = days;
+        document.getElementById("Hours").innerHTML = hours;
+        document.getElementById("Minutes").innerHTML = minutes;
+        document.getElementById("Seconds").innerHTML = seconds;
+
+        if (distance < 0){
+            clearInterval(x);
+            document.getElementById("Days").innerHTML = "00";
+            document.getElementById("Hours").innerHTML = "00";
+            document.getElementById("Minutes").innerHTML = "00";
+            document.getElementById("Seconds").innerHTML = "00";
+        }
+
+    },1000);
+        
+    const showImageBtn = document.getElementById("showImageBtn");
+    const imageToDisplay = document.getElementById("imageToDisplay");
+
+    showImageBtn.addEventListener("click", function() {
+
+    if (imageToDisplay.style.display === "none") {
+      imageToDisplay.style.display = "block";
+    } else {
+      imageToDisplay.style.display = "none";
+    }
+  });
+
+</script>
+</body>
+</html>
